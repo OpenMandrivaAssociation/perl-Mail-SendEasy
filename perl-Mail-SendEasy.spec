@@ -2,7 +2,7 @@
 %define module	Mail-SendEasy
 %define name	perl-%{module}
 %define version	1.2
-%define rel	1	
+%define rel	2
 
 Summary:	Send plain/html e-mails through SMTP servers
 Name:		%{name}
