@@ -14,7 +14,6 @@ URL:		http://search.cpan.org/dist/%{module}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Mail/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildRequires:	dos2unix
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildArch:	noarch
 Provides:	perl(Mail::SendEasy::AUTH)
 Provides:	perl(Mail::SendEasy::SMTP)
