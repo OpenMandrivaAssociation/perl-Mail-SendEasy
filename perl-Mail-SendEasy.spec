@@ -6,12 +6,12 @@
 
 Summary:	Send plain/html e-mails through SMTP servers
 Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
+Version:	%perl_convert_version 1.2
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Mail/%{module}-%{version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Mail/Mail-SendEasy-1.2.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	dos2unix
 BuildRoot:	%{_tmppath}/%{name}-%{version}
@@ -65,4 +65,5 @@ rm -rf %{buildroot}
 
 * Sun May 28 2006 Anssi Hannula <anssi@mandriva.org> 1.2-1mdv2007.0
 - initial Mandriva package
+
 
