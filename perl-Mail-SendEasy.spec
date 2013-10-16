@@ -1,20 +1,16 @@
-
 %define module	Mail-SendEasy
-%define name	perl-%{module}
-%define version	1.2
-%define rel	3
+%define upstream_version 1.2
 
 Summary:	Send plain/html e-mails through SMTP servers
-Name:		%{name}
-Version:	%perl_convert_version 1.2
+Name:		perl-%{module}
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Mail/Mail-SendEasy-1.2.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Mail/Mail-SendEasy-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	dos2unix
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildArch:	noarch
 Provides:	perl(Mail::SendEasy::AUTH)
 Provides:	perl(Mail::SendEasy::SMTP)
@@ -24,7 +20,7 @@ This modules will send in a easy way e-mails.
 It supports SMTP authentication and attachments.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{upstream_version}
 dos2unix README Changes
 
 %build
@@ -32,14 +28,9 @@ dos2unix README Changes
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{perl_vendorlib}/Mail
 %{_mandir}/man3/*
@@ -65,5 +56,6 @@ rm -rf %{buildroot}
 
 * Sun May 28 2006 Anssi Hannula <anssi@mandriva.org> 1.2-1mdv2007.0
 - initial Mandriva package
+
 
 
