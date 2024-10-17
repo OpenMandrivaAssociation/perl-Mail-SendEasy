@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	3
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
+URL:		https://search.cpan.org/dist/%{module}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Mail/Mail-SendEasy-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	dos2unix
